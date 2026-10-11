@@ -1,0 +1,59 @@
+{
+  "experiment": "002",
+  "conditions": {
+    "A": {
+      "files": [
+        "src/orders/order.model.ts",
+        "src/orders/order-status.ts",
+        "src/orders/order-exposure.ts",
+        "src/orders/order-exposure.facade.ts",
+        "src/orders/order-exposure.component.ts",
+        "src/orders/order-exposure.component.html",
+        "src/orders/order-exposure.examples.ts",
+        "orders.specification.md",
+        "src/watchlist/watchlist.ts",
+        "src/preferences/preferences.ts",
+        "src/notifications/notification-center.ts",
+        "src/portfolio/portfolio.ts",
+        "src/navigation/navigation.ts"
+      ],
+      "bytes": 19790,
+      "characters": 19790,
+      "sha256": "4836c7208688d4ff3eda2923ee2cc8124b2d642615dc74e0da74104c52d3b467",
+      "tokens": null
+    },
+    "B": {
+      "files": [
+        "src/orders/order.model.ts",
+        "src/orders/order-status.ts",
+        "src/orders/order-exposure.ts",
+        "src/orders/order-exposure.facade.ts",
+        "src/orders/order-exposure.component.ts",
+        "src/orders/order-exposure.component.html",
+        "src/orders/order-exposure.examples.ts",
+        "orders.specification.md"
+      ],
+      "bytes": 9800,
+      "characters": 9800,
+      "sha256": "8703d4208182800540e24a65cb9748dbc7b489f2b570a57348f951156405b9d1",
+      "tokens": null
+    }
+  },
+  "fixture_files": {
+    "orders.specification.md": "12cbdc49a2e9b40ba64d438c5ebbe34c65435d49e68008ffa14665a81fc62fcd",
+    "src/navigation/navigation.ts": "c5e33788335fed5e6c5531f540f109ca3e64f8d0ac71de46c1c6f4159be7138e",
+    "src/notifications/notification-center.ts": "ec46deb520cc5406664815c6fbbe224cdc4c5c30d5471bbbd6ad393eb158cd48",
+    "src/orders/order-exposure.component.html": "3df724a929d19fd935af6024d7d7cc1c92986b570498eb2ee84f6365b9fdb7ea",
+    "src/orders/order-exposure.component.ts": "299b34e44d0052d3c874708fe2912608c7a763ca924a5b5b19c4aa79c5a7137d",
+    "src/orders/order-exposure.examples.ts": "2b95ed1709586e737436d3f75e3a2f374017de3bb43d7a9509b04b4c6f862449",
+    "src/orders/order-exposure.facade.ts": "ad730aa7794e7c76062aaaa1333c836f695d8145460a14ece51ded780def5954",
+    "src/orders/order-exposure.ts": "f62ce327bec6526e532c4732376ea088e5bd7a2babc2e55943e16b61335f67de",
+    "src/orders/order-status.ts": "c0ca7f2e401351e72c574fc2b7c875741815fed91cd76a581e246948922bfa1b",
+    "src/orders/order.model.ts": "725f15eeb85d2047f65582dafde7592c1a430ad74fcb1f35fa45bc3a02ae1e10",
+    "src/portfolio/portfolio.ts": "4b44d24ad29a6fde2ff50d050940f5253b626317a5d4be71da69d05197b17ddf",
+    "src/preferences/preferences.ts": "803d6174f20a2c10b979c634f14d8694006a95df87c90ac6d0e73ab6d709ac8d",
+    "src/watchlist/watchlist.ts": "d65537d84d4207b20e33a740205f155a258f531c9fbc4498f8b5aea16adcfb4e"
+  },
+  "fixture_sha256": "76fa98c39bbd4999ac4abc9314a04bb282484f87663e458b24a5881956d2e99d",
+  "protocol_sha256": "1ec9219ce9178421fdd2a3691002d001c8f4979239f129072038b588a387e322"
+}

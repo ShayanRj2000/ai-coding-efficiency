@@ -1,6 +1,11 @@
 __pycache__/
 *.py[cod]
 .venv/
+node_modules/
+/verification/
+/.test-tools/*_local.ps1
+/.test-tools/local-*
+/.test-tools/*-local.*
 
 # Downloaded test runtime and temporary Git orchestration.
 /.test-tools/python/

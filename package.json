@@ -1,0 +1,19 @@
+{
+  "name": "ai-coding-efficiency",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Reproducible context-selection experiments with independent TypeScript acceptance checks",
+  "scripts": {
+    "test": "node --test tests/verification.test.cjs",
+    "verify": "node scripts/validate.cjs",
+    "verify:001": "node .test-tools/verify_orders.cjs",
+    "experiment:002": "node scripts/run_experiment.cjs",
+    "report:002": "node scripts/report_results.cjs"
+  },
+  "engines": { "node": ">=20.19.0" },
+  "devDependencies": {
+    "@angular/core": "20.3.0",
+    "rxjs": "7.8.2",
+    "typescript": "5.9.3"
+  }
+}

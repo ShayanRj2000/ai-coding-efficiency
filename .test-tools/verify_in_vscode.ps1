@@ -1,6 +1,7 @@
 $taskRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $taskRoot
 $resultDirectory = Join-Path $taskRoot 'experiment-001\test-results\2026-10-11'
+if (Test-Path -LiteralPath (Join-Path $resultDirectory 'model-trials.json')) { throw 'Experiment 001 evidence is immutable. Use npm run verify:001; new checks go under verification/.' }
 Write-Host 'Applying returned patches to separate fixture copies and checking acceptance'
 & node (Join-Path $PSScriptRoot 'verify_orders.cjs') 2>&1 | Tee-Object -FilePath (Join-Path $resultDirectory 'acceptance-verification.txt')
 if ($LASTEXITCODE -eq 0) {

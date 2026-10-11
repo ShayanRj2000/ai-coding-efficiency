@@ -1,0 +1,60 @@
+{
+  "experiment": "002",
+  "run_id": "2026-10-11-paired-001",
+  "source_sha256": "56dbdf0cfd37c191b7db246be685b9064581db0b2b0fe8eb63ffb935415e498c",
+  "generated_at_utc": "2026-10-11T14:46:19.637Z",
+  "conditions": {
+    "A": {
+      "prompt_bytes": 19790,
+      "passed": 3,
+      "valid_executions": 3,
+      "median_input": 18179,
+      "median_cached_input": 0,
+      "median_output": 2959,
+      "median_reasoning_output": 2070,
+      "median_total": 21138,
+      "median_seconds": 78.0483438
+    },
+    "B": {
+      "prompt_bytes": 9800,
+      "passed": 3,
+      "valid_executions": 3,
+      "median_input": 13791,
+      "median_cached_input": 0,
+      "median_output": 2979,
+      "median_reasoning_output": 2057,
+      "median_total": 17114,
+      "median_seconds": 87.8486906
+    }
+  },
+  "pairs": [
+    {
+      "trial": 1,
+      "order": "A/B",
+      "total_A": 21138,
+      "total_B": 18907,
+      "total_B_minus_A": -2231,
+      "seconds_B_minus_A": 11.027551799999998
+    },
+    {
+      "trial": 2,
+      "order": "B/A",
+      "total_A": 20629,
+      "total_B": 17114,
+      "total_B_minus_A": -3515,
+      "seconds_B_minus_A": 22.167701800000003
+    },
+    {
+      "trial": 3,
+      "order": "A/B",
+      "total_A": 21974,
+      "total_B": 16219,
+      "total_B_minus_A": -5755,
+      "seconds_B_minus_A": -50.10084620000001
+    }
+  ],
+  "byte_reduction": 9990,
+  "byte_reduction_percent": 50.480040424456796,
+  "measurement": "Whole-run Codex CLI totals; cached input is included in input and reasoning is included in output. No isolated prompt token or monetary measurement.",
+  "correctness_scope": "Strict TypeScript compilation including Angular imports/decorators, unchanged exported API, eleven business cases with frozen inputs, facade consumption, fresh snapshots. No browser or Angular template compilation."
+}

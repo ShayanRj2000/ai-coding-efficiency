@@ -5,6 +5,8 @@ import statistics
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "experiment-001/test-results/2026-10-11"
+if (OUT / "summary.json").exists():
+    raise SystemExit("Experiment 001 evidence is immutable. Use npm run report:002 for new results.")
 inputs = json.loads((OUT / "input-verification.json").read_text(encoding="utf-8"))
 trials = json.loads((OUT / "model-trials.json").read_text(encoding="utf-8"))
 acceptance = json.loads((OUT / "acceptance-verification.json").read_text(encoding="utf-8"))

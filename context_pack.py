@@ -5,6 +5,17 @@ import re
 import sys
 
 
+def normalize_newlines(content):
+    return content.replace("\r\n", "\n").replace("\r", "\n")
+
+
+def write_utf8_lf(path, content):
+    """Write deterministic UTF-8/LF, then return the actual saved bytes."""
+    path = Path(path)
+    path.write_bytes(normalize_newlines(content).encode("utf-8"))
+    return path.read_bytes()
+
+
 def pack(root, selections):
     root = Path(root).resolve(strict=True)
     sections = []
@@ -18,6 +29,7 @@ def pack(root, selections):
         content = path.read_bytes().decode("utf-8")
         if "\x00" in content:
             raise ValueError("Binary content is not supported")
+        content = normalize_newlines(content)
         label = path.relative_to(root).as_posix()
         if match:
             start, end = int(match.group(2)), int(match.group(3))
@@ -36,14 +48,19 @@ def pack(root, selections):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", required=True)
+    parser.add_argument("--output", type=Path, help="save exact UTF-8/LF bytes to this file")
     parser.add_argument("selections", nargs="+", help="relative file or file:start:end")
     args = parser.parse_args()
     try:
         output = pack(args.root, args.selections)
+        if args.output:
+            saved = write_utf8_lf(args.output, output)
+        else:
+            saved = output.encode("utf-8")
+            sys.stdout.buffer.write(saved)
     except (OSError, ValueError, UnicodeError) as error:
         parser.exit(2, f"Error: {error}\n")
-    sys.stdout.write(output)
-    print(f"Context: {len(output)} characters, {len(output.encode('utf-8'))} bytes; tokens unknown", file=sys.stderr)
+    print(f"Context: {len(saved.decode('utf-8'))} characters, {len(saved)} bytes; tokens unknown", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-10-11T14:49:48.143Z",
+  "passed": true,
+  "run_id": "2026-10-11-paired-001",
+  "paired_runs": 6,
+  "usage_matches_raw_events": true,
+  "saved_byte_counts_and_hashes_match": true,
+  "frozen_fixture_protocol_verifier_and_lockfile_match": true,
+  "correctness_matches_acceptance": true,
+  "historical_commit": "424ea803034023f7f6dc0b8082af5df1d64dfe07",
+  "historical_content_matches_original_commit": true,
+  "historical_files_checked": 64,
+  "historical_raw_bytes_matching_git": 62,
+  "historical_existing_crlf_copies_archived": 2
+}

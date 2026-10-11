@@ -1,8 +1,9 @@
 """Generate Experiment 001 fixtures and ready-to-paste prompts without model calls."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
-from context_pack import pack
+from context_pack import normalize_newlines, pack, write_utf8_lf
 
 FILES = {
     "orders.ts": "export interface Order { id: string; price: number; quantity: number; }\nexport function totalValue(orders: readonly Order[]): number {\n  return orders.reduce((total, order) => total + order.price, 0);\n}\n",
@@ -13,23 +14,33 @@ FILES = {
 TASK = "Fix totalValue to satisfy the specification. Keep its public API unchanged. Return the patch and a short verification summary.\n\n"
 
 
-def main():
-    destination = Path(__file__).parent / "experiment-001"
+def prepare(destination):
+    destination = Path(destination)
+    if any((destination / "test-results").glob("*/model-trials.json")):
+        raise SystemExit("Refusing to overwrite a recorded experiment; use --destination for a fresh directory")
     fixture = destination / "fixture"
     fixture.mkdir(parents=True, exist_ok=True)
     # Preserve returned model patches; regenerating must not overwrite fixture edits.
     for name, content in FILES.items():
         path = fixture / name
-        if path.exists() and path.read_text(encoding="utf-8") != content:
+        if path.exists() and normalize_newlines(path.read_bytes().decode("utf-8")) != content:
             raise SystemExit(f"Refusing to overwrite modified fixture: {path}")
-        path.write_text(content, encoding="utf-8")
+    for name, content in FILES.items():
+        write_utf8_lf(fixture / name, content)
     metrics = {}
     for condition, names in [("A", list(FILES)), ("B", ["orders.ts", "orders.specification.md"])]:
         prompt = TASK + pack(fixture, names)
-        (destination / f"prompt-{condition}.md").write_text(prompt, encoding="utf-8")
-        metrics[condition] = {"characters": len(prompt), "bytes": len(prompt.encode("utf-8")), "sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(), "tokens": None}
-    metrics["status"] = "context payloads measured; no model trials"
-    (destination / "context-metrics.json").write_text(json.dumps(metrics, indent=2) + "\n", encoding="utf-8")
+        saved = write_utf8_lf(destination / f"prompt-{condition}.md", prompt)
+        metrics[condition] = {"characters": len(saved.decode("utf-8")), "bytes": len(saved), "sha256": hashlib.sha256(saved).hexdigest(), "tokens": None}
+    metrics["status"] = "context payloads measured; model usage recorded separately"
+    write_utf8_lf(destination / "context-metrics.json", json.dumps(metrics, indent=2) + "\n")
+    return metrics
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--destination", type=Path, default=Path(__file__).parent / "experiment-001")
+    metrics = prepare(parser.parse_args().destination)
     print(json.dumps(metrics, indent=2))
 
 

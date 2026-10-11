@@ -2,6 +2,7 @@ $ErrorActionPreference = 'Continue'
 $taskRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $taskRoot
 $resultDirectory = Join-Path $taskRoot 'experiment-001\test-results\2026-10-11'
+if (Test-Path -LiteralPath (Join-Path $resultDirectory 'model-trials.json')) { throw 'Experiment 001 evidence is immutable. Use the setup and experiment commands in README.md.' }
 New-Item -ItemType Directory -Path $resultDirectory -Force | Out-Null
 $pythonRuntime = Join-Path $PSScriptRoot 'python\python.exe'
 Set-Content -LiteralPath (Join-Path $resultDirectory 'terminal-status.txt') -Value 'Running unit tests in VS Code terminal' -Encoding UTF8

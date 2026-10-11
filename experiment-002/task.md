@@ -1,0 +1,1 @@
+Fix summarizeOrderExposure in src/orders/order-exposure.ts to satisfy orders.specification.md and its existing Angular/facade consumers. Change only src/orders/order-exposure.ts. Keep its exported API unchanged. Return a unified diff patch and a short verification summary. All task inputs are supplied below; do not use tools or repository access.

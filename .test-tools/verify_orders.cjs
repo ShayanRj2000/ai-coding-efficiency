@@ -3,10 +3,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
-const out = path.join(root, 'experiment-001', 'test-results', '2026-10-11');
+const evidence = path.join(root, 'experiment-001', 'test-results', '2026-10-11');
+const out = path.join(root, 'verification', 'experiment-001');
 const fixture = path.join(root, 'experiment-001', 'fixture');
-const tsPath = path.join(process.env.LOCALAPPDATA, 'Programs', 'Microsoft VS Code', '2a59476c9b', 'resources', 'app', 'extensions', 'node_modules', 'typescript', 'lib', 'typescript.js');
-const ts = require(tsPath);
+const ts = require('typescript');
 const original = fs.readFileSync(path.join(fixture, 'orders.ts'), 'utf8');
 const normalize = text => text.replace(/\r\n/g, '\n');
 function api(text) {
@@ -78,13 +78,13 @@ function verify(source, directory) {
   return {checks, observed, diagnostics: diagnostics.map(diagnostic => ts.flattenDiagnosticMessageText(diagnostic.messageText, '\n')), passed: Object.values(checks).every(Boolean)};
 }
 const result = {typescript_version: ts.version, original_fixture: verify(original, path.join(out, 'verification', 'original')), model_runs: []};
-const trialsPath = path.join(out, 'model-trials.json');
+const trialsPath = path.join(evidence, 'model-trials.json');
 if (fs.existsSync(trialsPath)) {
   const trials = JSON.parse(fs.readFileSync(trialsPath, 'utf8'));
   for (const record of trials.runs) {
     const name = `trial-${record.trial}-${record.condition}`;
     try {
-      const response = fs.readFileSync(path.join(out, record.response), 'utf8');
+      const response = fs.readFileSync(path.join(evidence, record.response), 'utf8');
       const source = apply(response);
       const validation = verify(source, path.join(out, 'verification', name));
       result.model_runs.push({trial: record.trial, condition: record.condition, ...validation});
@@ -94,3 +94,4 @@ if (fs.existsSync(trialsPath)) {
 fs.writeFileSync(path.join(out, 'acceptance-verification.json'), JSON.stringify(result, null, 2) + '\n');
 console.log(JSON.stringify(result, null, 2));
 console.log(`Model patches passing acceptance: ${result.model_runs.filter(run => run.passed).length}/${result.model_runs.length}`);
+if (!fs.existsSync(trialsPath) || result.model_runs.length === 0 || result.model_runs.some(run => !run.passed)) process.exitCode = 1;

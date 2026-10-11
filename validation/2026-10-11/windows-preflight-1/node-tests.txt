@@ -1,0 +1,38 @@
+✔ applies unified diff with LF and CRLF responses (1.5612ms)
+✔ supports explicit Begin Patch hunks (0.31ms)
+✔ rejects a patch outside the allowed file (0.6306ms)
+✔ rejects inconsistent line counts and missing context (0.3255ms)
+✔ baseline compiles but fails business acceptance (1628.394ms)
+✖ reference satisfies grouping, filters, partial fills, immutability, API and consumers (1233.0188ms)
+✔ acceptance rejects ignoring filled quantities (1060.4667ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4293.2899
+
+✖ failing tests:
+
+test at tests\verification.test.cjs:42:1
+✖ reference satisfies grouping, filters, partial fills, immutability, API and consumers (1233.0188ms)
+  AssertionError [ERR_ASSERTION]: {"typescript_version":"5.9.3","checks":{"typecheck":true,"public_api_unchanged":false,"empty_input":true,"empty_input_inputs_unchanged":true,"worked_example":true,"worked_example_inputs_unchanged":true,"account_isolation":true,"account_isolation_inputs_unchanged":true,"closed_statuses":true,"closed_statuses_inputs_unchanged":true,"partial_fill":true,"partial_fill_inputs_unchanged":true,"clamped_remaining":true,"clamped_remaining_inputs_unchanged":true,"empty_symbol_selection":true,"empty_symbol_selection_inputs_unchanged":true,"exact_symbol_selection":true,"exact_symbol_selection_inputs_unchanged":true,"negative_net":true,"negative_net_inputs_unchanged":true,"zero_price_with_shares":true,"zero_price_with_shares_inputs_unchanged":true,"deterministic_order":true,"deterministic_order_inputs_unchanged":true,"facade_consumers":true,"fresh_snapshot":true},"observed":{"empty_input":{"actual":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0},"expected":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0}},"worked_example":{"actual":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":7,"sellQuantity":5,"buyNotional":70,"sellNotional":52,"netNotional":18},{"symbol":"BBB","buyQuantity":8,"sellQuantity":0,"buyNotional":20,"sellNotional":0,"netNotional":20}],"totalBuyNotional":90,"totalSellNotional":52,"netNotional":38},"expected":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":7,"sellQuantity":5,"buyNotional":70,"sellNotional":52,"netNotional":18},{"symbol":"BBB","buyQuantity":8,"sellQuantity":0,"buyNotional":20,"sellNotional":0,"netNotional":20}],"totalBuyNotional":90,"totalSellNotional":52,"netNotional":38}},"account_isolation":{"actual":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0},"expected":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0}},"closed_statuses":{"actual":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0},"expected":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0}},"partial_fill":{"actual":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":3,"sellQuantity":0,"buyNotional":30,"sellNotional":0,"netNotional":30}],"totalBuyNotional":30,"totalSellNotional":0,"netNotional":30},"expected":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":3,"sellQuantity":0,"buyNotional":30,"sellNotional":0,"netNotional":30}],"totalBuyNotional":30,"totalSellNotional":0,"netNotional":30}},"clamped_remaining":{"actual":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0},"expected":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0}},"empty_symbol_selection":{"actual":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0},"expected":{"accountId":"alpha","rows":[],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0}},"exact_symbol_selection":{"actual":{"accountId":"alpha","rows":[{"symbol":"BBB","buyQuantity":8,"sellQuantity":0,"buyNotional":20,"sellNotional":0,"netNotional":20}],"totalBuyNotional":20,"totalSellNotional":0,"netNotional":20},"expected":{"accountId":"alpha","rows":[{"symbol":"BBB","buyQuantity":8,"sellQuantity":0,"buyNotional":20,"sellNotional":0,"netNotional":20}],"totalBuyNotional":20,"totalSellNotional":0,"netNotional":20}},"negative_net":{"actual":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":0,"sellQuantity":3,"buyNotional":0,"sellNotional":3.75,"netNotional":-3.75}],"totalBuyNotional":0,"totalSellNotional":3.75,"netNotional":-3.75},"expected":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":0,"sellQuantity":3,"buyNotional":0,"sellNotional":3.75,"netNotional":-3.75}],"totalBuyNotional":0,"totalSellNotional":3.75,"netNotional":-3.75}},"zero_price_with_shares":{"actual":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":5,"sellQuantity":0,"buyNotional":0,"sellNotional":0,"netNotional":0}],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0},"expected":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":5,"sellQuantity":0,"buyNotional":0,"sellNotional":0,"netNotional":0}],"totalBuyNotional":0,"totalSellNotional":0,"netNotional":0}},"deterministic_order":{"actual":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":5,"sellQuantity":0,"buyNotional":50,"sellNotional":0,"netNotional":50},{"symbol":"ZZZ","buyQuantity":5,"sellQuantity":0,"buyNotional":50,"sellNotional":0,"netNotional":50}],"totalBuyNotional":100,"totalSellNotional":0,"netNotional":100},"expected":{"accountId":"alpha","rows":[{"symbol":"AAA","buyQuantity":5,"sellQuantity":0,"buyNotional":50,"sellNotional":0,"netNotional":50},{"symbol":"ZZZ","buyQuantity":5,"sellQuantity":0,"buyNotional":50,"sellNotional":0,"netNotional":50}],"totalBuyNotional":100,"totalSellNotional":0,"netNotional":100}},"facade_consumers":{"actual":[{"symbol":"AAA","outstandingBuy":7,"outstandingSell":5,"netNotional":18,"bias":"buy"},{"symbol":"BBB","outstandingBuy":8,"outstandingSell":0,"netNotional":20,"bias":"buy"}],"expected":[{"symbol":"AAA","outstandingBuy":7,"outstandingSell":5,"netNotional":18,"bias":"buy"},{"symbol":"BBB","outstandingBuy":8,"outstandingSell":0,"netNotional":20,"bias":"buy"}]}},"diagnostics":[],"passed":false}
+  
+  false !== true
+  
+      at TestContext.<anonymous> (D:\Users\S.Razmjouy\Desktop\ai-coding-efficiency\tests\verification.test.cjs:44:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

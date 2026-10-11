@@ -4,6 +4,7 @@ const path = require('node:path');
 const { spawn } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, 'experiment-001', 'test-results', '2026-10-11');
+if (fs.existsSync(path.join(out, 'model-trials.json'))) throw new Error('Experiment 001 evidence is immutable. Use npm run experiment:002 for new trials.');
 const cli = path.join(process.env.APPDATA, 'npm', 'node_modules', '@openai', 'codex', 'bin', 'codex.js');
 const sandbox = path.join(out, 'model-sandbox');
 fs.mkdirSync(sandbox, {recursive: true});

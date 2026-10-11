@@ -13,6 +13,8 @@ from context_pack import pack
 from prepare_experiment import FILES, TASK
 
 OUT = ROOT / "experiment-001" / "test-results" / "2026-10-11"
+if (OUT / "input-verification.json").exists():
+    raise SystemExit("Experiment 001 evidence is immutable. Run the portable unit tests instead.")
 OUT.mkdir(parents=True, exist_ok=True)
 stored = json.loads((ROOT / "experiment-001/context-metrics.json").read_text(encoding="utf-8"))
 result = {"python": sys.version, "date": "2026-10-11", "conditions": {}, "generator_checks": {}}

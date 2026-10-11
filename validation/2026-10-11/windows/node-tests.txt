@@ -1,0 +1,15 @@
+✔ applies unified diff with LF and CRLF responses (1.4803ms)
+✔ supports explicit Begin Patch hunks (0.1605ms)
+✔ rejects a patch outside the allowed file (0.4126ms)
+✔ rejects inconsistent line counts and missing context (0.2243ms)
+✔ baseline compiles but fails business acceptance (1679.8721ms)
+✔ reference satisfies grouping, filters, partial fills, immutability, API and consumers (1192.4835ms)
+✔ acceptance rejects ignoring filled quantities (1053.4583ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4233.8643

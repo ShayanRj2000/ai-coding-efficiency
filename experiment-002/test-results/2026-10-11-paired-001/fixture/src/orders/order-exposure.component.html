@@ -1,0 +1,27 @@
+<section aria-label="Outstanding order exposure">
+  <header>
+    <h2>Account {{ snapshot.accountId }}</h2>
+    <dl>
+      <dt>Buy notional</dt><dd>{{ snapshot.totalBuyNotional }}</dd>
+      <dt>Sell notional</dt><dd>{{ snapshot.totalSellNotional }}</dd>
+      <dt>Net notional</dt><dd>{{ snapshot.netNotional }}</dd>
+    </dl>
+  </header>
+  @if (cards.length === 0) {
+    <p>No working orders match this account and symbol selection.</p>
+  } @else {
+    <table>
+      <thead><tr><th>Symbol</th><th>Buy shares</th><th>Sell shares</th><th>Net</th></tr></thead>
+      <tbody>
+        @for (card of cards; track card.symbol) {
+          <tr [attr.data-bias]="card.bias">
+            <td>{{ card.symbol }}</td>
+            <td>{{ card.outstandingBuy }}</td>
+            <td>{{ card.outstandingSell }}</td>
+            <td>{{ card.netNotional }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</section>

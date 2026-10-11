@@ -1,0 +1,18 @@
+{
+  "experiment": "002",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "xhigh",
+  "shell_tools": false,
+  "unified_exec": false,
+  "user_config_loaded": false,
+  "web_search": "disabled",
+  "project_instructions_bytes": 0,
+  "fresh_session_per_run": true,
+  "sandbox": "read-only",
+  "correction_turns": 0,
+  "timeout_seconds": 300,
+  "order": [[1, "A"], [1, "B"], [2, "B"], [2, "A"], [3, "A"], [3, "B"]],
+  "allowed_patch_file": "src/orders/order-exposure.ts",
+  "acceptance_source": "scripts/exposure_acceptance.cjs",
+  "measurement": "whole-run Codex CLI reported usage; cached input and reasoning are not added twice"
+}
