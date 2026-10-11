@@ -38,6 +38,8 @@ The outside-root tests always run. Only the separate symlink test skips when the
 
 `npm test` checks the patch verifier, confirms that the larger baseline fails business checks while compiling, validates an independent reference fix, and rejects a partial-fill regression. `verify:001` rechecks the six saved patches using the pinned compiler; it writes new copies under ignored `verification/experiment-001/`, preserving historical evidence.
 
+The implementation passed [Windows and Linux CI](https://github.com/ShayanRj2000/ai-coding-efficiency/actions/runs/38148846913): 18 Python tests, seven verifier tests, and six saved-patch checks on each runner. Local Windows verification skipped only the symlink check when permission was unavailable.
+
 To record all checks as UTF-8/LF logs and JSON, optionally pass an interpreter and output directory:
 
 ```sh

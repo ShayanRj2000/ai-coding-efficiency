@@ -1,0 +1,168 @@
+{
+  "observed_at_utc": "2026-10-11T14:53:31.205Z",
+  "tested_commit": "3c1c445d7cacb47f1a4e3aeeb920418e4b1d8bb4",
+  "run_id": 38148846913,
+  "url": "https://github.com/ShayanRj2000/ai-coding-efficiency/actions/runs/38148846913",
+  "jobs": [
+    {
+      "id": 114497825497,
+      "name": "test (windows-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-11T14:51:03Z",
+      "completed_at": "2026-10-11T14:51:53Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci --ignore-scripts",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -B -m unittest discover -v",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run verify:001",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 114497825596,
+      "name": "test (ubuntu-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-11T14:51:02Z",
+      "completed_at": "2026-10-11T14:51:22Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci --ignore-scripts",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -B -m unittest discover -v",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run verify:001",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "relevant_log_lines": {
+    "linux": [
+      "2026-10-11T14:51:08.8393938Z test_rejects_symlink_outside_root (test_context_pack.ContextPackTests.test_rejects_symlink_outside_root) ... ok",
+      "2026-10-11T14:51:08.8879124Z Ran 18 tests in 0.130s",
+      "2026-10-11T14:51:08.8879918Z OK",
+      "2026-10-11T14:51:13.4734069Z ℹ tests 7",
+      "2026-10-11T14:51:13.4735537Z ℹ pass 7",
+      "2026-10-11T14:51:13.4736105Z ℹ fail 0",
+      "2026-10-11T14:51:18.7610746Z Model patches passing acceptance: 6/6"
+    ],
+    "windows": [
+      "2026-10-11T14:51:34.8265487Z test_rejects_symlink_outside_root (test_context_pack.ContextPackTests.test_rejects_symlink_outside_root) ... ok",
+      "2026-10-11T14:51:35.0072178Z Ran 18 tests in 0.321s",
+      "2026-10-11T14:51:35.0072552Z OK",
+      "2026-10-11T14:51:41.0673805Z ℹ tests 7",
+      "2026-10-11T14:51:41.0674565Z ℹ pass 7",
+      "2026-10-11T14:51:41.0674892Z ℹ fail 0",
+      "2026-10-11T14:51:47.1064139Z Model patches passing acceptance: 6/6"
+    ]
+  }
+}
