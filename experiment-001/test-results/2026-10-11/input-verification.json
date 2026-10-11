@@ -1,0 +1,35 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "date": "2026-10-11",
+  "conditions": {
+    "A": {
+      "characters": 797,
+      "bytes": 797,
+      "sha256": "218a94d8adf3be8c3c10c1552d57061e2188801f7686d52bf13b07a3986d5279",
+      "tokens": null,
+      "existing_prompt_bytes": 797,
+      "existing_prompt_sha256": "218a94d8adf3be8c3c10c1552d57061e2188801f7686d52bf13b07a3986d5279",
+      "stored_metrics_match_existing_bytes": true,
+      "stored_hash_matches_existing_bytes": true
+    },
+    "B": {
+      "characters": 632,
+      "bytes": 632,
+      "sha256": "4c944426d036c874f2c9a64f37295c3959805c27903e267097c9bd11a70a6090",
+      "tokens": null,
+      "existing_prompt_bytes": 632,
+      "existing_prompt_sha256": "4c944426d036c874f2c9a64f37295c3959805c27903e267097c9bd11a70a6090",
+      "stored_metrics_match_existing_bytes": true,
+      "stored_hash_matches_existing_bytes": true
+    }
+  },
+  "generator_checks": {
+    "generation_succeeds": true,
+    "regeneration_is_identical": true,
+    "metrics_match_written_payloads": false,
+    "modified_fixture_is_protected": true
+  },
+  "fixture_sha256": "4049bd3e1943cace443dfa401a1821fd4abc3886299c74df98ca83403177a57c",
+  "byte_reduction": 165,
+  "byte_reduction_percent": 20.70263488080301
+}

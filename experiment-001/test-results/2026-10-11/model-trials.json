@@ -1,0 +1,142 @@
+{
+  "settings": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "cli_version": "0.160.0",
+    "shell_tools": false,
+    "web_search": "disabled",
+    "user_config_loaded": false,
+    "project_instructions_bytes": 0,
+    "fresh_session_per_run": true,
+    "date": "2026-10-11",
+    "cache_state": "not forced; reported cached tokens retained"
+  },
+  "runs": [
+    {
+      "trial": 1,
+      "condition": "A",
+      "exit_code": 0,
+      "signal": null,
+      "elapsed_seconds": 34.8032212,
+      "context_bytes": 797,
+      "usage": {
+        "input_tokens": 44820,
+        "cached_input_tokens": 28672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 694,
+        "reasoning_output_tokens": 233
+      },
+      "correction_turns": 0,
+      "tool_calls": [],
+      "completed": true,
+      "response": "trial-1-A-response.md",
+      "events": "trial-1-A-events.jsonl",
+      "errors": []
+    },
+    {
+      "trial": 1,
+      "condition": "B",
+      "exit_code": 0,
+      "signal": null,
+      "elapsed_seconds": 36.0174028,
+      "context_bytes": 632,
+      "usage": {
+        "input_tokens": 65017,
+        "cached_input_tokens": 43392,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 654,
+        "reasoning_output_tokens": 213
+      },
+      "correction_turns": 0,
+      "tool_calls": [],
+      "completed": true,
+      "response": "trial-1-B-response.md",
+      "events": "trial-1-B-events.jsonl",
+      "errors": []
+    },
+    {
+      "trial": 2,
+      "condition": "B",
+      "exit_code": 0,
+      "signal": null,
+      "elapsed_seconds": 29.6437391,
+      "context_bytes": 632,
+      "usage": {
+        "input_tokens": 60992,
+        "cached_input_tokens": 41344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 736,
+        "reasoning_output_tokens": 192
+      },
+      "correction_turns": 0,
+      "tool_calls": [],
+      "completed": true,
+      "response": "trial-2-B-response.md",
+      "events": "trial-2-B-events.jsonl",
+      "errors": []
+    },
+    {
+      "trial": 2,
+      "condition": "A",
+      "exit_code": 0,
+      "signal": null,
+      "elapsed_seconds": 43.7921541,
+      "context_bytes": 797,
+      "usage": {
+        "input_tokens": 44745,
+        "cached_input_tokens": 13568,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1151,
+        "reasoning_output_tokens": 585
+      },
+      "correction_turns": 0,
+      "tool_calls": [],
+      "completed": true,
+      "response": "trial-2-A-response.md",
+      "events": "trial-2-A-events.jsonl",
+      "errors": []
+    },
+    {
+      "trial": 3,
+      "condition": "A",
+      "exit_code": 0,
+      "signal": null,
+      "elapsed_seconds": 30.6128942,
+      "context_bytes": 797,
+      "usage": {
+        "input_tokens": 53033,
+        "cached_input_tokens": 31616,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 693,
+        "reasoning_output_tokens": 227
+      },
+      "correction_turns": 0,
+      "tool_calls": [],
+      "completed": true,
+      "response": "trial-3-A-response.md",
+      "events": "trial-3-A-events.jsonl",
+      "errors": []
+    },
+    {
+      "trial": 3,
+      "condition": "B",
+      "exit_code": 0,
+      "signal": null,
+      "elapsed_seconds": 33.2414489,
+      "context_bytes": 632,
+      "usage": {
+        "input_tokens": 38190,
+        "cached_input_tokens": 24320,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 817,
+        "reasoning_output_tokens": 368
+      },
+      "correction_turns": 0,
+      "tool_calls": [],
+      "completed": true,
+      "response": "trial-3-B-response.md",
+      "events": "trial-3-B-events.jsonl",
+      "errors": []
+    }
+  ]
+}

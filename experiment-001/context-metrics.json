@@ -1,0 +1,15 @@
+{
+  "A": {
+    "characters": 797,
+    "bytes": 797,
+    "sha256": "218a94d8adf3be8c3c10c1552d57061e2188801f7686d52bf13b07a3986d5279",
+    "tokens": null
+  },
+  "B": {
+    "characters": 632,
+    "bytes": 632,
+    "sha256": "4c944426d036c874f2c9a64f37295c3959805c27903e267097c9bd11a70a6090",
+    "tokens": null
+  },
+  "status": "context payloads measured; three paired model trials recorded in RESULTS.md on 2026-10-11"
+}

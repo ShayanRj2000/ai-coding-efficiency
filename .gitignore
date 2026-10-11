@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+
+# Downloaded test runtime and temporary Git orchestration.
+/.test-tools/python/
+/.test-tools/*.zip
+/.test-tools/*git*_in_vscode.ps1
+/.test-tools/git-*
+
+# Transient terminal progress markers.
+/experiment-001/test-results/**/terminal-status.txt
+/experiment-001/test-results/**/verification-status.txt

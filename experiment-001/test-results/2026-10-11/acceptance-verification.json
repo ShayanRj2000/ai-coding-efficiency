@@ -1,0 +1,227 @@
+{
+  "typescript_version": "6.0.3",
+  "original_fixture": {
+    "checks": {
+      "typecheck": true,
+      "public_api_unchanged": true,
+      "empty_input": true,
+      "specified_example": false,
+      "fractional_values": false,
+      "frozen_input_unchanged": true
+    },
+    "observed": {
+      "empty_input": {
+        "actual": 0,
+        "expected": 0
+      },
+      "specified_example": {
+        "actual": 17,
+        "expected": 46
+      },
+      "fractional_values": {
+        "actual": 1.5,
+        "expected": 3
+      },
+      "frozen_input_unchanged": {
+        "actual": true,
+        "expected": true
+      }
+    },
+    "diagnostics": [],
+    "passed": false
+  },
+  "model_runs": [
+    {
+      "trial": 1,
+      "condition": "A",
+      "checks": {
+        "typecheck": true,
+        "public_api_unchanged": true,
+        "empty_input": true,
+        "specified_example": true,
+        "fractional_values": true,
+        "frozen_input_unchanged": true
+      },
+      "observed": {
+        "empty_input": {
+          "actual": 0,
+          "expected": 0
+        },
+        "specified_example": {
+          "actual": 46,
+          "expected": 46
+        },
+        "fractional_values": {
+          "actual": 3,
+          "expected": 3
+        },
+        "frozen_input_unchanged": {
+          "actual": true,
+          "expected": true
+        }
+      },
+      "diagnostics": [],
+      "passed": true
+    },
+    {
+      "trial": 1,
+      "condition": "B",
+      "checks": {
+        "typecheck": true,
+        "public_api_unchanged": true,
+        "empty_input": true,
+        "specified_example": true,
+        "fractional_values": true,
+        "frozen_input_unchanged": true
+      },
+      "observed": {
+        "empty_input": {
+          "actual": 0,
+          "expected": 0
+        },
+        "specified_example": {
+          "actual": 46,
+          "expected": 46
+        },
+        "fractional_values": {
+          "actual": 3,
+          "expected": 3
+        },
+        "frozen_input_unchanged": {
+          "actual": true,
+          "expected": true
+        }
+      },
+      "diagnostics": [],
+      "passed": true
+    },
+    {
+      "trial": 2,
+      "condition": "B",
+      "checks": {
+        "typecheck": true,
+        "public_api_unchanged": true,
+        "empty_input": true,
+        "specified_example": true,
+        "fractional_values": true,
+        "frozen_input_unchanged": true
+      },
+      "observed": {
+        "empty_input": {
+          "actual": 0,
+          "expected": 0
+        },
+        "specified_example": {
+          "actual": 46,
+          "expected": 46
+        },
+        "fractional_values": {
+          "actual": 3,
+          "expected": 3
+        },
+        "frozen_input_unchanged": {
+          "actual": true,
+          "expected": true
+        }
+      },
+      "diagnostics": [],
+      "passed": true
+    },
+    {
+      "trial": 2,
+      "condition": "A",
+      "checks": {
+        "typecheck": true,
+        "public_api_unchanged": true,
+        "empty_input": true,
+        "specified_example": true,
+        "fractional_values": true,
+        "frozen_input_unchanged": true
+      },
+      "observed": {
+        "empty_input": {
+          "actual": 0,
+          "expected": 0
+        },
+        "specified_example": {
+          "actual": 46,
+          "expected": 46
+        },
+        "fractional_values": {
+          "actual": 3,
+          "expected": 3
+        },
+        "frozen_input_unchanged": {
+          "actual": true,
+          "expected": true
+        }
+      },
+      "diagnostics": [],
+      "passed": true
+    },
+    {
+      "trial": 3,
+      "condition": "A",
+      "checks": {
+        "typecheck": true,
+        "public_api_unchanged": true,
+        "empty_input": true,
+        "specified_example": true,
+        "fractional_values": true,
+        "frozen_input_unchanged": true
+      },
+      "observed": {
+        "empty_input": {
+          "actual": 0,
+          "expected": 0
+        },
+        "specified_example": {
+          "actual": 46,
+          "expected": 46
+        },
+        "fractional_values": {
+          "actual": 3,
+          "expected": 3
+        },
+        "frozen_input_unchanged": {
+          "actual": true,
+          "expected": true
+        }
+      },
+      "diagnostics": [],
+      "passed": true
+    },
+    {
+      "trial": 3,
+      "condition": "B",
+      "checks": {
+        "typecheck": true,
+        "public_api_unchanged": true,
+        "empty_input": true,
+        "specified_example": true,
+        "fractional_values": true,
+        "frozen_input_unchanged": true
+      },
+      "observed": {
+        "empty_input": {
+          "actual": 0,
+          "expected": 0
+        },
+        "specified_example": {
+          "actual": 46,
+          "expected": 46
+        },
+        "fractional_values": {
+          "actual": 3,
+          "expected": 3
+        },
+        "frozen_input_unchanged": {
+          "actual": true,
+          "expected": true
+        }
+      },
+      "diagnostics": [],
+      "passed": true
+    }
+  ]
+}

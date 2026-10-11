@@ -1,0 +1,15 @@
+* text=auto
+*.py text eol=lf
+*.cjs text eol=lf
+*.ps1 text eol=lf
+*.ts text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+
+# Preserve recorded hashes across Windows and Unix checkouts.
+experiment-001/fixture/* text eol=lf
+experiment-001/prompt-*.md text eol=lf
+
+# PowerShell transcript files can be UTF-16; preserve their raw encoding.
+*.txt -text
