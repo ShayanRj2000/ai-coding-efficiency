@@ -132,3 +132,24 @@ Acceptance includes strict TypeScript compilation with the pinned compiler and A
 
 Evidence: [raw usage/settings](experiment-002/test-results/2026-10-11-paired-001/model-trials.json), [derived summary](experiment-002/test-results/2026-10-11-paired-001/summary.json), [frozen context hashes](experiment-002/test-results/2026-10-11-paired-001/context-metrics.json), and individual response, JSONL event, stderr, and acceptance files beside them. Original fixture snapshots and patched verification copies are retained. The [protocol](experiment-002/protocol.json) describes the predeclared controls.
 <!-- experiment-002:end -->
+
+<!-- experiment-003:start -->
+## Experiment 003: multi-file ticket parity
+
+**Results pending.** The protocol, prompts, verifier, reference tests, and runner are prepared. No model trials have completed yet. Completed valid trials so far: 0/0/0; no three-condition token or latency comparison is published until all nine finish.
+
+| Measurement | A: full | B: sufficient focused | C: insufficient focused |
+| --- | ---: | ---: | ---: |
+| Saved prompt bytes | 21919 | 11929 | 5841 |
+| Acceptance | 0/0 completed | 0/0 completed | 0/0 completed |
+| Median input tokens | unknown | unknown | unknown |
+| Median cached input tokens | unknown | unknown | unknown |
+| Median output tokens | unknown | unknown | unknown |
+| Median reasoning output tokens | unknown | unknown | unknown |
+| Median input + output tokens | unknown | unknown | unknown |
+| Median elapsed seconds | unknown | unknown | unknown |
+
+A provides all 16 files. B provides 11 sufficient files. C provides four files and omits the account model, venue policies, gateway contract, examples, facade, and Angular component/template. The omission list was declared before runs. A successful C result would be an observed inference on this task, not proof that those contracts are dispensable.
+
+Whole-run input + output is the sum reported for each run before calculating medians. Cached input and reasoning output are already included and are not added again. These measurements do not isolate context-selection effects or demonstrate general efficiency or monetary savings. Acceptance covers strict TypeScript, both unchanged exported APIs, 21 independent business cases, preview/submission/facade parity, frozen inputs and venue policies, and fresh results. Browser behavior and template compilation remain outside scope.
+<!-- experiment-003:end -->

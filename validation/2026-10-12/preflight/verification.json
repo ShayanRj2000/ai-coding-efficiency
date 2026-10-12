@@ -1,0 +1,80 @@
+{
+  "recorded_at_utc": "2026-10-12T06:42:45.019Z",
+  "platform": "win32",
+  "arch": "x64",
+  "node_version": "v24.16.0",
+  "typescript_version": "5.9.3",
+  "checks": [
+    {
+      "name": "python-version",
+      "command": [
+        ".test-tools/python/python.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "passed": true,
+      "log": "python-version.txt",
+      "saved_metrics": {
+        "bytes": 15,
+        "characters": 15,
+        "sha256": "9dcfe8b0cd3c0e7dc319ce79c66bba0bef6c1928973103b72d03f57bf32bb412"
+      }
+    },
+    {
+      "name": "python-tests",
+      "command": [
+        ".test-tools/python/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-v"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "passed": true,
+      "log": "python-tests.txt",
+      "saved_metrics": {
+        "bytes": 3024,
+        "characters": 3024,
+        "sha256": "af32a8e6bed3f1c420089911c45c03ee706769db3ef37610b5799185430bd0f9"
+      }
+    },
+    {
+      "name": "node-tests",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "tests/verification.test.cjs",
+        "tests/ticket-verification.test.cjs"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "passed": true,
+      "log": "node-tests.txt",
+      "saved_metrics": {
+        "bytes": 1327,
+        "characters": 1279,
+        "sha256": "c7ce395b35f00c97a0e754bd5572be98ee03c3d3ecf5c1fa0e72e4ba58ba5342"
+      }
+    },
+    {
+      "name": "experiment-001-reverification",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        ".test-tools/verify_orders.cjs"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "passed": true,
+      "log": "experiment-001-reverification.txt",
+      "saved_metrics": {
+        "bytes": 5073,
+        "characters": 5073,
+        "sha256": "0f4e0d6516e23a4a51fdbeb069502b23ea516db5ac113ca88d8a34de48e12e55"
+      }
+    }
+  ],
+  "passed": true
+}

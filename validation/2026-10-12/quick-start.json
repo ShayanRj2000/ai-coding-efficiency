@@ -1,0 +1,20 @@
+{
+  "documented_command": "python context_pack.py --root examples --output examples/context.generated.md orders.ts:2:2",
+  "executed_argv": [
+    ".test-tools/python/python.exe",
+    "context_pack.py",
+    "--root",
+    "examples",
+    "--output",
+    "examples/context.generated.md",
+    "orders.ts:2:2"
+  ],
+  "exit_code": 0,
+  "stderr": "Context: 46 characters, 46 bytes; tokens unknown",
+  "output": "### orders.ts:2:2\n\n  return price * quantity;\n",
+  "saved_metrics": {
+    "bytes": 46,
+    "characters": 46,
+    "sha256": "dca702d943c326d72bf224e4c6c97531b1745a177e08b12891f7dac7d84703ae"
+  }
+}

@@ -10,7 +10,7 @@ fs.mkdirSync(directory,{recursive:true});
 const commands = [
   ['python-version',python,['--version']],
   ['python-tests',python,['-B','-m','unittest','discover','-v']],
-  ['node-tests',process.execPath,['--test','tests/verification.test.cjs']],
+  ['node-tests',process.execPath,['--test','tests/verification.test.cjs','tests/ticket-verification.test.cjs']],
   ['experiment-001-reverification',process.execPath,['.test-tools/verify_orders.cjs']],
 ];
 const checks = commands.map(([name,executable,args]) => {

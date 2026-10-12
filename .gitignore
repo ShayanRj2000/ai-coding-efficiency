@@ -3,6 +3,7 @@ __pycache__/
 .venv/
 node_modules/
 /verification/
+/examples/context.generated.md
 /.test-tools/*_local.ps1
 /.test-tools/local-*
 /.test-tools/*-local.*

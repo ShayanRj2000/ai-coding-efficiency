@@ -4,11 +4,14 @@
   "private": true,
   "description": "Reproducible context-selection experiments with independent TypeScript acceptance checks",
   "scripts": {
-    "test": "node --test tests/verification.test.cjs",
+    "test": "node --test tests/verification.test.cjs tests/ticket-verification.test.cjs",
     "verify": "node scripts/validate.cjs",
     "verify:001": "node .test-tools/verify_orders.cjs",
     "experiment:002": "node scripts/run_experiment.cjs",
-    "report:002": "node scripts/report_results.cjs"
+    "report:002": "node scripts/report_results.cjs",
+    "experiment:003": "node scripts/run_experiment_003.cjs",
+    "report:003": "node scripts/report_experiment_003.cjs",
+    "verify:003": "node scripts/verify_experiment_003.cjs"
   },
   "engines": { "node": ">=20.19.0" },
   "devDependencies": {

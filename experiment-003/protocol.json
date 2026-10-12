@@ -1,0 +1,22 @@
+{
+  "experiment": "003",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "xhigh",
+  "shell_tools": false,
+  "unified_exec": false,
+  "user_config_loaded": false,
+  "web_search": "disabled",
+  "project_instructions_bytes": 0,
+  "fresh_session_per_run": true,
+  "sandbox": "read-only",
+  "correction_turns": 0,
+  "timeout_seconds": 300,
+  "order": [[1,"A"],[1,"B"],[1,"C"],[2,"B"],[2,"C"],[2,"A"],[3,"C"],[3,"A"],[3,"B"]],
+  "conditions": {"A":"full context", "B":"sufficient focused context", "C":"insufficient focused context"},
+  "allowed_files": ["src/tickets/build-ticket-request.ts", "src/tickets/present-ticket.ts"],
+  "response_format": "JSON {files: {path: complete source, path: complete source}, notes: string}",
+  "acceptance_source": "scripts/ticket_acceptance.cjs",
+  "insufficient_omissions": ["src/accounts/account.model.ts", "src/venues/venue-policies.ts", "src/contracts/wire-contract.md", "src/tickets/ticket.examples.ts", "src/tickets/ticket.facade.ts", "src/tickets/ticket.component.ts", "src/tickets/ticket.component.html"],
+  "measurement": "whole-run Codex CLI usage; cached input and reasoning output are not added twice",
+  "pending_policy": "If model access is unavailable, retain failed-attempt evidence, stop, and publish pending results without invented trials or usage."
+}

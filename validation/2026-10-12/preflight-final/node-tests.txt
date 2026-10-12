@@ -1,0 +1,24 @@
+✔ ticket response preserves source and enforces complete allowed-file scope (4.0134ms)
+✔ ticket baseline compiles but rejects acceptance in both target files (2080.1514ms)
+✔ ticket reference passes independent numeric, rejection, preview and facade criteria (1621.9072ms)
+✔ ticket verifier rejects regression: UI shares sent as gateway lots (1268.7223ms)
+✔ ticket verifier rejects regression: buy price rounded up (1014.9801ms)
+✔ ticket verifier rejects regression: fee truncated (1010.4505ms)
+✔ ticket verifier rejects regression: cash equality rejected (1046.896ms)
+✔ ticket verifier rejects regression: raw price displayed in preview (1004.308ms)
+✔ ticket verifier rejects regression: invalid draft enabled (988.8895ms)
+✔ applies unified diff with LF and CRLF responses (2.0043ms)
+✔ supports explicit Begin Patch hunks (0.1972ms)
+✔ rejects a patch outside the allowed file (0.4308ms)
+✔ rejects inconsistent line counts and missing context (0.2211ms)
+✔ baseline compiles but fails business acceptance (2027.7464ms)
+✔ reference satisfies grouping, filters, partial fills, immutability, API and consumers (1678.0433ms)
+✔ acceptance rejects ignoring filled quantities (1276.6933ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10496.8062

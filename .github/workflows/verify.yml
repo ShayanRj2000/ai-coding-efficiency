@@ -19,3 +19,4 @@ jobs:
       - run: python -B -m unittest discover -v
       - run: npm test
       - run: npm run verify:001
+      - run: npm run verify:003

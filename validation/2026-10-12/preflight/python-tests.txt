@@ -1,0 +1,26 @@
+test_cli_saves_utf8_lf_and_reports_actual_bytes (test_context_pack.ContextPackTests.test_cli_saves_utf8_lf_and_reports_actual_bytes) ... ok
+test_cli_stdout_has_lf_bytes (test_context_pack.ContextPackTests.test_cli_stdout_has_lf_bytes) ... ok
+test_duplicate_selection (test_context_pack.ContextPackTests.test_duplicate_selection) ... ok
+test_inclusive_range (test_context_pack.ContextPackTests.test_inclusive_range) ... ok
+test_lf_and_crlf_inputs_produce_identical_context (test_context_pack.ContextPackTests.test_lf_and_crlf_inputs_produce_identical_context) ... ok
+test_rejects_absolute_outside_root (test_context_pack.ContextPackTests.test_rejects_absolute_outside_root) ... ok
+test_rejects_bad_ranges (test_context_pack.ContextPackTests.test_rejects_bad_ranges) ... ok
+test_rejects_binary (test_context_pack.ContextPackTests.test_rejects_binary) ... ok
+test_rejects_relative_outside_root (test_context_pack.ContextPackTests.test_rejects_relative_outside_root) ... ok
+test_rejects_symlink_outside_root (test_context_pack.ContextPackTests.test_rejects_symlink_outside_root) ... skipped "Symlink support or permission unavailable: [WinError 1314] A required privilege is not held by the client: 'D:\\\\Users\\\\S.Razmjouy\\\\AppData\\\\Local\\\\Temp\\\\tmpyf8163ip\\\\outside.txt' -> 'D:\\\\Users\\\\S.Razmjouy\\\\AppData\\\\Local\\\\Temp\\\\tmp30ikyty8\\\\link.txt'"
+test_accepts_crlf_fixture_and_rewrites_lf (test_prepare_experiment.PrepareExperimentTests.test_accepts_crlf_fixture_and_rewrites_lf) ... ok
+test_metrics_match_actual_saved_utf8_lf_bytes (test_prepare_experiment.PrepareExperimentTests.test_metrics_match_actual_saved_utf8_lf_bytes) ... ok
+test_modified_fixture_is_rejected_before_any_writes (test_prepare_experiment.PrepareExperimentTests.test_modified_fixture_is_rejected_before_any_writes) ... ok
+test_recorded_experiment_is_not_overwritten (test_prepare_experiment.PrepareExperimentTests.test_recorded_experiment_is_not_overwritten) ... ok
+test_regeneration_is_byte_identical (test_prepare_experiment.PrepareExperimentTests.test_regeneration_is_byte_identical) ... ok
+test_unicode_byte_counts_are_not_character_counts (test_prepare_experiment.PrepareExperimentTests.test_unicode_byte_counts_are_not_character_counts) ... ok
+test_lf_and_crlf_sources_produce_identical_payloads (test_prepare_experiment_002.LargerExperimentTests.test_lf_and_crlf_sources_produce_identical_payloads) ... ok
+test_saved_prompts_and_manifest_are_exact (test_prepare_experiment_002.LargerExperimentTests.test_saved_prompts_and_manifest_are_exact) ... ok
+test_conditions_and_saved_hashes (test_prepare_experiment_003.ThreeConditionTests.test_conditions_and_saved_hashes) ... ok
+test_lf_and_crlf_payloads_match (test_prepare_experiment_003.ThreeConditionTests.test_lf_and_crlf_payloads_match) ... ok
+test_recorded_run_is_protected (test_prepare_experiment_003.ThreeConditionTests.test_recorded_run_is_protected) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 1.203s
+
+OK (skipped=1)
