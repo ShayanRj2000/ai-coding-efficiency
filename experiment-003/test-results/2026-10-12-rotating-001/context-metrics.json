@@ -1,0 +1,80 @@
+{
+  "experiment": "003",
+  "conditions": {
+    "A": {
+      "files": [
+        "src/tickets/build-ticket-request.ts",
+        "src/tickets/present-ticket.ts",
+        "src/tickets/ticket.model.ts",
+        "ticket.specification.md",
+        "src/accounts/account.model.ts",
+        "src/venues/venue-policies.ts",
+        "src/contracts/wire-contract.md",
+        "src/tickets/ticket.examples.ts",
+        "src/tickets/ticket.facade.ts",
+        "src/tickets/ticket.component.ts",
+        "src/tickets/ticket.component.html",
+        "src/watchlist/watchlist.ts",
+        "src/preferences/preferences.ts",
+        "src/notifications/notification-center.ts",
+        "src/portfolio/portfolio.ts",
+        "src/navigation/navigation.ts"
+      ],
+      "bytes": 21919,
+      "characters": 21919,
+      "sha256": "72318c351fb5f152737d198909a1ef69c777f37b5b511f492e114ced62f11702",
+      "tokens": null
+    },
+    "B": {
+      "files": [
+        "src/tickets/build-ticket-request.ts",
+        "src/tickets/present-ticket.ts",
+        "src/tickets/ticket.model.ts",
+        "ticket.specification.md",
+        "src/accounts/account.model.ts",
+        "src/venues/venue-policies.ts",
+        "src/contracts/wire-contract.md",
+        "src/tickets/ticket.examples.ts",
+        "src/tickets/ticket.facade.ts",
+        "src/tickets/ticket.component.ts",
+        "src/tickets/ticket.component.html"
+      ],
+      "bytes": 11929,
+      "characters": 11929,
+      "sha256": "6c349bed5e2352040ecac1c8e301c45aa8d6f1e46fea1003b954ab757fac120c",
+      "tokens": null
+    },
+    "C": {
+      "files": [
+        "src/tickets/build-ticket-request.ts",
+        "src/tickets/present-ticket.ts",
+        "src/tickets/ticket.model.ts",
+        "ticket.specification.md"
+      ],
+      "bytes": 5841,
+      "characters": 5841,
+      "sha256": "aa6c4769e4abcece74769314c4358ef39c7d52b8e8f51e2ff10ace6698dc4faa",
+      "tokens": null
+    }
+  },
+  "fixture_files": {
+    "src/accounts/account.model.ts": "edcebb146bcd65e309a4151880bcffe66465a52cf42dc9369e054d6aa15f654a",
+    "src/contracts/wire-contract.md": "a0c962a28a48524a6967128aaba32db5ee1a67a5fb096a7ff4491aeebf77aee4",
+    "src/navigation/navigation.ts": "c5e33788335fed5e6c5531f540f109ca3e64f8d0ac71de46c1c6f4159be7138e",
+    "src/notifications/notification-center.ts": "ec46deb520cc5406664815c6fbbe224cdc4c5c30d5471bbbd6ad393eb158cd48",
+    "src/portfolio/portfolio.ts": "4b44d24ad29a6fde2ff50d050940f5253b626317a5d4be71da69d05197b17ddf",
+    "src/preferences/preferences.ts": "803d6174f20a2c10b979c634f14d8694006a95df87c90ac6d0e73ab6d709ac8d",
+    "src/tickets/build-ticket-request.ts": "e4138d3238d08b9e712fbeb0f249888efa4252a90e0640445d5a5e994d91ab12",
+    "src/tickets/present-ticket.ts": "9f20211c2fc7d1a91959b0c87f0f59947bf39a7cf2ddefec7e4aa830c206d0bf",
+    "src/tickets/ticket.component.html": "8ae48dbef445f23ab9e3553fc4ca699d11e5a8417e7bb89877046df7bc5b9fb7",
+    "src/tickets/ticket.component.ts": "16f6d50308ddcf4c521c06e6c223d3ad94e480560ed38fa464a162644eba45f3",
+    "src/tickets/ticket.examples.ts": "f52907ef4f78f9c4ed727be61d2e0f20c174e0de6c3acbd6ac16b237c1210f6c",
+    "src/tickets/ticket.facade.ts": "30e3c53e34a73f6e9483804adbca20dd5063bcc241b38e1e70791d3710c893b2",
+    "src/tickets/ticket.model.ts": "4a17b86a062105d77b81bf5f2e14c8328f4337a00532b831abec5f711893626f",
+    "src/venues/venue-policies.ts": "f484fea1b447299b68fbc5fece774afd3a53eab60a7b089b3ca9e43babe3b727",
+    "src/watchlist/watchlist.ts": "d65537d84d4207b20e33a740205f155a258f531c9fbc4498f8b5aea16adcfb4e",
+    "ticket.specification.md": "329f889712307ea8700a39193b6f31e12e5a3379247c3f2eba2a1c5d6a52d0f3"
+  },
+  "fixture_sha256": "311316276616010c7fbc325d7a30d79f01e067e3ae6fb47e4b73cdc751a46b16",
+  "protocol_sha256": "b2fa283b747818327280cca20c5c1568590aa3dc08b2263adc25c625c7f186ad"
+}

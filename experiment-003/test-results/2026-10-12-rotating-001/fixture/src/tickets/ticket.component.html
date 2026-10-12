@@ -1,0 +1,8 @@
+@if (view; as ticket) {
+  <section aria-label="Order ticket preview">
+    <p>{{ ticket.quantityLabel }} at {{ ticket.priceLabel }}</p>
+    <p>Estimated cash (minor units): {{ ticket.estimatedCashMinor }}</p>
+    @if (ticket.reason) { <p role="alert">{{ ticket.reason }}</p> }
+    <button type="button" [disabled]="!ticket.canSubmit">Submit order</button>
+  </section>
+}

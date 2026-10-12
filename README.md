@@ -91,16 +91,19 @@ The [predeclared protocol](experiment-003/README.md) asks for coordinated change
 
 Three trials per condition rotate A/B/C, B/C/A, C/A/B. All use identical `gpt-6.1-sol`/`xhigh` settings, task instructions, fresh sessions, acceptance criteria, and zero correction turns. The verifier is tested before models against a broken baseline, a correct reference, and six regressions. C may still infer a correct solution; its outcome is measured rather than assumed.
 
+**Current results are pending.** On 2026-10-12, the first A and B trials passed acceptance, then the first C request received HTTP 503 / model capacity errors with no usage or correctness result. The partial run is retained. It does not support a three-condition comparison or a conclusion about C's context quality.
+
 Model runs require an authenticated Codex CLI and access to the declared model. The CLI version used is recorded. Keep model authentication outside repository files.
 
 ```sh
-python prepare_experiment_003.py
 npm run experiment:003 -- UNIQUE_RUN_ID
 npm run report:003 -- UNIQUE_RUN_ID
 npm run verify:003
 ```
 
 Use a fresh run ID: even partial run directories cannot be overwritten. The runner snapshots prompts, fixture, protocol, and execution/acceptance code; records raw responses/events, input/output/cached tokens, elapsed time, correctness, and corrections; and checks that the inputs remain frozen. If model access is unavailable, [status](experiment-003/STATUS.md) and results are marked **pending**, with no fabricated measurements.
+
+Prompts and byte/hash metrics are already committed. To check regeneration without touching recorded inputs, run `python prepare_experiment_003.py --destination verification/generated-003`; model runs use the committed prompts under `experiment-003/`. The generator refuses to overwrite a destination containing recorded attempts.
 
 Earlier protocols remain available in [EXPERIMENT.md](EXPERIMENT.md) and [Experiment 002](experiment-002/README.md). To exercise the first generator safely, use `python prepare_experiment.py --destination verification/generated-001`. Re-running historical report commands can rewrite derived text; preserve recorded artifacts when conducting new work.
 

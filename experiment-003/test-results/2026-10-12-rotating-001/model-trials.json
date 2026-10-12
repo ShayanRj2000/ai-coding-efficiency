@@ -1,0 +1,287 @@
+{
+  "experiment": "003",
+  "run_id": "2026-10-12-rotating-001",
+  "status": "pending",
+  "started_at_utc": "2026-10-12T06:55:10.534Z",
+  "timezone": "Asia/Tehran",
+  "pre_run_commit": "50ba03e80e174a230a893e2c728f21817faa73d4",
+  "settings": {
+    "experiment": "003",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "shell_tools": false,
+    "unified_exec": false,
+    "user_config_loaded": false,
+    "web_search": "disabled",
+    "project_instructions_bytes": 0,
+    "fresh_session_per_run": true,
+    "sandbox": "read-only",
+    "correction_turns": 0,
+    "timeout_seconds": 300,
+    "order": [
+      [
+        1,
+        "A"
+      ],
+      [
+        1,
+        "B"
+      ],
+      [
+        1,
+        "C"
+      ],
+      [
+        2,
+        "B"
+      ],
+      [
+        2,
+        "C"
+      ],
+      [
+        2,
+        "A"
+      ],
+      [
+        3,
+        "C"
+      ],
+      [
+        3,
+        "A"
+      ],
+      [
+        3,
+        "B"
+      ]
+    ],
+    "conditions": {
+      "A": "full context",
+      "B": "sufficient focused context",
+      "C": "insufficient focused context"
+    },
+    "allowed_files": [
+      "src/tickets/build-ticket-request.ts",
+      "src/tickets/present-ticket.ts"
+    ],
+    "response_format": "JSON {files: {path: complete source, path: complete source}, notes: string}",
+    "acceptance_source": "scripts/ticket_acceptance.cjs",
+    "insufficient_omissions": [
+      "src/accounts/account.model.ts",
+      "src/venues/venue-policies.ts",
+      "src/contracts/wire-contract.md",
+      "src/tickets/ticket.examples.ts",
+      "src/tickets/ticket.facade.ts",
+      "src/tickets/ticket.component.ts",
+      "src/tickets/ticket.component.html"
+    ],
+    "measurement": "whole-run Codex CLI usage; cached input and reasoning output are not added twice",
+    "pending_policy": "If model access is unavailable, retain failed-attempt evidence, stop, and publish pending results without invented trials or usage."
+  },
+  "fixture_sha256": "311316276616010c7fbc325d7a30d79f01e067e3ae6fb47e4b73cdc751a46b16",
+  "code_sha256": {
+    "scripts/ticket_response.cjs": "34c59a034ed6cefb0fa8e7bb9159e171a8b80b64e713d50212e0a72bcdd00186",
+    "scripts/ticket_acceptance.cjs": "91c615848097e99324a9341d4489271778afa0e942345f2c64a068898b4ac0fc",
+    "scripts/verification.cjs": "ce0414be80d0578d8cabc5b84f49542daeaccd2d055e260523e3a0428f9fa4bb",
+    "scripts/artifacts.cjs": "489c483fc08353754da2f84a19fa0c6a8eb7b446a745b88e02607ba287dcf820",
+    "scripts/run_experiment_003.cjs": "35ef1e574833e67cd1f482e265f304131ab847614e286c46979ccba7e94e4d65",
+    "package.json": "da3594d2ef3c0fa451aeed1b6da6cf30e41a9934a9c90c1331c8f003300de099",
+    "package-lock.json": "fa400d15a9a26fbfe28636e3f90124ffbf289ccd23260d7bc262a56c94dfaaf7"
+  },
+  "node_version": "v24.16.0",
+  "usage_source": "Codex CLI turn.completed events; whole-run totals",
+  "cache_state": "not controlled",
+  "runs": [
+    {
+      "trial": 1,
+      "condition": "A",
+      "started_at_utc": "2026-10-12T06:55:12.600Z",
+      "elapsed_seconds": 88.3071391,
+      "context_bytes": 21919,
+      "cli_arguments": [
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "read-only",
+        "--json",
+        "--color",
+        "never",
+        "--model",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"xhigh\"",
+        "-c",
+        "project_doc_max_bytes=0",
+        "-c",
+        "features.shell_tool=false",
+        "-c",
+        "features.unified_exec=false",
+        "-c",
+        "web_search=\"disabled\"",
+        "-C",
+        "D:\\Users\\S.Razmjouy\\Desktop\\ai-coding-efficiency\\experiment-003\\test-results\\2026-10-12-rotating-001\\model-sandbox",
+        "--output-last-message",
+        "D:\\Users\\S.Razmjouy\\Desktop\\ai-coding-efficiency\\experiment-003\\test-results\\2026-10-12-rotating-001\\trial-1-A-response.md",
+        "-"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "valid_execution": true,
+      "tool_calls": [],
+      "correction_turns": 0,
+      "usage": {
+        "input_tokens": 18565,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2792,
+        "reasoning_output_tokens": 1758
+      },
+      "response": "trial-1-A-response.md",
+      "events": "trial-1-A-events.jsonl",
+      "errors": [],
+      "correctness": true,
+      "response_metrics": {
+        "bytes": 3616,
+        "characters": 3616,
+        "sha256": "f2aa80c86e6f65c6b5ad9cf6ed2794444f92352ce94c635f166a30e31c18ea88"
+      },
+      "response_format": true,
+      "model_notes": "Checked by inspection against the supplied validation order, routing, units, rounding, fees, and buy/sell examples. No tools or tests were run.",
+      "acceptance": "trial-1-A-acceptance.json",
+      "failed_checks": []
+    },
+    {
+      "trial": 1,
+      "condition": "B",
+      "started_at_utc": "2026-10-12T06:56:42.839Z",
+      "elapsed_seconds": 84.1068499,
+      "context_bytes": 11929,
+      "cli_arguments": [
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "read-only",
+        "--json",
+        "--color",
+        "never",
+        "--model",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"xhigh\"",
+        "-c",
+        "project_doc_max_bytes=0",
+        "-c",
+        "features.shell_tool=false",
+        "-c",
+        "features.unified_exec=false",
+        "-c",
+        "web_search=\"disabled\"",
+        "-C",
+        "D:\\Users\\S.Razmjouy\\Desktop\\ai-coding-efficiency\\experiment-003\\test-results\\2026-10-12-rotating-001\\model-sandbox",
+        "--output-last-message",
+        "D:\\Users\\S.Razmjouy\\Desktop\\ai-coding-efficiency\\experiment-003\\test-results\\2026-10-12-rotating-001\\trial-1-B-response.md",
+        "-"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "valid_execution": true,
+      "tool_calls": [],
+      "correction_turns": 0,
+      "usage": {
+        "input_tokens": 16314,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2488,
+        "reasoning_output_tokens": 1402
+      },
+      "response": "trial-1-B-response.md",
+      "events": "trial-1-B-events.jsonl",
+      "errors": [],
+      "correctness": true,
+      "response_metrics": {
+        "bytes": 3661,
+        "characters": 3661,
+        "sha256": "e9557dc804d11201d623b7664526a111db6ac152f83a1cb459aac2391b789f25"
+      },
+      "response_format": true,
+      "model_notes": "Verified by inspection against the specified validation order, routing, rounding, fees, and buy/sell examples. Signatures preserved; inputs remain untouched. No tools or runtime tests used.",
+      "acceptance": "trial-1-B-acceptance.json",
+      "failed_checks": []
+    },
+    {
+      "trial": 1,
+      "condition": "C",
+      "started_at_utc": "2026-10-12T06:58:08.550Z",
+      "elapsed_seconds": 13.158095,
+      "context_bytes": 5841,
+      "cli_arguments": [
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "read-only",
+        "--json",
+        "--color",
+        "never",
+        "--model",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"xhigh\"",
+        "-c",
+        "project_doc_max_bytes=0",
+        "-c",
+        "features.shell_tool=false",
+        "-c",
+        "features.unified_exec=false",
+        "-c",
+        "web_search=\"disabled\"",
+        "-C",
+        "D:\\Users\\S.Razmjouy\\Desktop\\ai-coding-efficiency\\experiment-003\\test-results\\2026-10-12-rotating-001\\model-sandbox",
+        "--output-last-message",
+        "D:\\Users\\S.Razmjouy\\Desktop\\ai-coding-efficiency\\experiment-003\\test-results\\2026-10-12-rotating-001\\trial-1-C-response.md",
+        "-"
+      ],
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "valid_execution": false,
+      "tool_calls": [],
+      "correction_turns": 0,
+      "usage": null,
+      "response": "trial-1-C-response.md",
+      "events": "trial-1-C-events.jsonl",
+      "errors": [
+        {
+          "type": "error",
+          "message": "Reconnecting... 2/5 (unexpected status 503 Service Unavailable: An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists.)"
+        },
+        {
+          "type": "error",
+          "message": "Reconnecting... 3/5 (unexpected status 503 Service Unavailable: An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists.)"
+        },
+        {
+          "type": "error",
+          "message": "Selected model is at capacity. Please try a different model."
+        },
+        {
+          "type": "turn.failed",
+          "error": {
+            "message": "Selected model is at capacity. Please try a different model."
+          }
+        }
+      ],
+      "correctness": null
+    }
+  ],
+  "cli_version": "codex-cli 0.160.0",
+  "cli_entry_sha256": "61b0194f3bb6534439c8d26a3ed57d0805f84b884588b761795323eeb92fcf70",
+  "pending_reason": "A model execution did not complete under the declared settings; remaining trials were not invented."
+}

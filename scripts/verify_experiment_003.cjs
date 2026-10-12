@@ -10,6 +10,7 @@ let checked=0;
 if(fs.existsSync(directory)) for(const entry of fs.readdirSync(directory,{withFileTypes:true}).filter(e=>e.isDirectory())) {
   const runDirectory=path.join(directory,entry.name);
   const trials=JSON.parse(fs.readFileSync(path.join(runDirectory,'model-trials.json')));
+  assert.deepEqual(trials.runs.map(r=>[r.trial,r.condition]),trials.settings.order.slice(0,trials.runs.length),'Run order differs from the declared protocol');
   const manifest=JSON.parse(fs.readFileSync(path.join(runDirectory,'context-metrics.json')));
   assert.equal(sha256(fs.readFileSync(path.join(runDirectory,'protocol.json'))),manifest.protocol_sha256);
   for(const [name,hash] of Object.entries(trials.code_sha256)) assert.equal(sha256(fs.readFileSync(path.join(runDirectory,'execution',name))),hash);

@@ -1,0 +1,1448 @@
+{
+  "typescript_version": "5.9.3",
+  "checks": {
+    "typecheck": true,
+    "public_api:src/tickets/build-ticket-request.ts": true,
+    "public_api:src/tickets/present-ticket.ts": true,
+    "primary_buy_routing_units_fee:submission": true,
+    "primary_buy_routing_units_fee:preview": true,
+    "primary_buy_routing_units_fee:facade": true,
+    "primary_buy_routing_units_fee:inputs_unchanged": true,
+    "sell_rounds_up_without_cash:submission": true,
+    "sell_rounds_up_without_cash:preview": true,
+    "sell_rounds_up_without_cash:facade": true,
+    "sell_rounds_up_without_cash:inputs_unchanged": true,
+    "sell_does_not_validate_cash_balance:submission": true,
+    "sell_does_not_validate_cash_balance:preview": true,
+    "sell_does_not_validate_cash_balance:facade": true,
+    "sell_does_not_validate_cash_balance:inputs_unchanged": true,
+    "odd_venue_fractional_price:submission": true,
+    "odd_venue_fractional_price:preview": true,
+    "odd_venue_fractional_price:facade": true,
+    "odd_venue_fractional_price:inputs_unchanged": true,
+    "already_aligned_binary_price:submission": true,
+    "already_aligned_binary_price:preview": true,
+    "already_aligned_binary_price:facade": true,
+    "already_aligned_binary_price:inputs_unchanged": true,
+    "cash_equality_is_accepted:submission": true,
+    "cash_equality_is_accepted:preview": true,
+    "cash_equality_is_accepted:facade": true,
+    "cash_equality_is_accepted:inputs_unchanged": true,
+    "fee_makes_cash_insufficient:submission": true,
+    "fee_makes_cash_insufficient:preview": true,
+    "fee_makes_cash_insufficient:facade": true,
+    "fee_makes_cash_insufficient:inputs_unchanged": true,
+    "reject_partial_lot:submission": true,
+    "reject_partial_lot:preview": true,
+    "reject_partial_lot:facade": true,
+    "reject_partial_lot:inputs_unchanged": true,
+    "reject_zero_quantity:submission": true,
+    "reject_zero_quantity:preview": true,
+    "reject_zero_quantity:facade": true,
+    "reject_zero_quantity:inputs_unchanged": true,
+    "reject_maximum_lots_overflow:submission": true,
+    "reject_maximum_lots_overflow:preview": true,
+    "reject_maximum_lots_overflow:facade": true,
+    "reject_maximum_lots_overflow:inputs_unchanged": true,
+    "reject_negative_price:submission": true,
+    "reject_negative_price:preview": true,
+    "reject_negative_price:facade": true,
+    "reject_negative_price:inputs_unchanged": true,
+    "reject_price_below_buy_tick:submission": true,
+    "reject_price_below_buy_tick:preview": true,
+    "reject_price_below_buy_tick:facade": true,
+    "reject_price_below_buy_tick:inputs_unchanged": true,
+    "reject_nan_price:submission": true,
+    "reject_nan_price:preview": true,
+    "reject_nan_price:facade": true,
+    "reject_nan_price:inputs_unchanged": true,
+    "reject_infinite_quantity:submission": true,
+    "reject_infinite_quantity:preview": true,
+    "reject_infinite_quantity:facade": true,
+    "reject_infinite_quantity:inputs_unchanged": true,
+    "unsupported_venue_precedes_account:submission": true,
+    "unsupported_venue_precedes_account:preview": true,
+    "unsupported_venue_precedes_account:facade": true,
+    "unsupported_venue_precedes_account:inputs_unchanged": true,
+    "venue_key_is_case_sensitive:submission": true,
+    "venue_key_is_case_sensitive:preview": true,
+    "venue_key_is_case_sensitive:facade": true,
+    "venue_key_is_case_sensitive:inputs_unchanged": true,
+    "account_mismatch_precedes_quantity:submission": true,
+    "account_mismatch_precedes_quantity:preview": true,
+    "account_mismatch_precedes_quantity:facade": true,
+    "account_mismatch_precedes_quantity:inputs_unchanged": true,
+    "blocked_account:submission": true,
+    "blocked_account:preview": true,
+    "blocked_account:facade": true,
+    "blocked_account:inputs_unchanged": true,
+    "empty_id_precedes_symbol:submission": true,
+    "empty_id_precedes_symbol:preview": true,
+    "empty_id_precedes_symbol:facade": true,
+    "empty_id_precedes_symbol:inputs_unchanged": true,
+    "empty_symbol_precedes_quantity:submission": true,
+    "empty_symbol_precedes_quantity:preview": true,
+    "empty_symbol_precedes_quantity:facade": true,
+    "empty_symbol_precedes_quantity:inputs_unchanged": true,
+    "unsupported_time_in_force:submission": true,
+    "unsupported_time_in_force:preview": true,
+    "unsupported_time_in_force:facade": true,
+    "unsupported_time_in_force:inputs_unchanged": true,
+    "fresh_results": true,
+    "shared_policies_unchanged": true
+  },
+  "diagnostics": [],
+  "observed": {
+    "primary_buy_routing_units_fee": {
+      "actual": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1230,
+            "notionalMinor": 36900,
+            "feeMinor": 60,
+            "requiredCashMinor": 36960
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.30 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 36960,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          }
+        },
+        "facadeSubmission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1230,
+            "notionalMinor": 36900,
+            "feeMinor": 60,
+            "requiredCashMinor": 36960
+          }
+        },
+        "facadePreview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.30 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 36960,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          }
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1230,
+            "notionalMinor": 36900,
+            "feeMinor": 60,
+            "requiredCashMinor": 36960
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.30 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 36960,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          }
+        }
+      }
+    },
+    "sell_rounds_up_without_cash": {
+      "actual": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1235,
+            "notionalMinor": 37050,
+            "feeMinor": 60,
+            "requiredCashMinor": 0
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.35 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 0,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          }
+        },
+        "facadeSubmission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1235,
+            "notionalMinor": 37050,
+            "feeMinor": 60,
+            "requiredCashMinor": 0
+          }
+        },
+        "facadePreview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.35 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 0,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          }
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1235,
+            "notionalMinor": 37050,
+            "feeMinor": 60,
+            "requiredCashMinor": 0
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.35 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 0,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          }
+        }
+      }
+    },
+    "sell_does_not_validate_cash_balance": {
+      "actual": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1235,
+            "notionalMinor": 37050,
+            "feeMinor": 60,
+            "requiredCashMinor": 0
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.35 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 0,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          }
+        },
+        "facadeSubmission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1235,
+            "notionalMinor": 37050,
+            "feeMinor": 60,
+            "requiredCashMinor": 0
+          }
+        },
+        "facadePreview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.35 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 0,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          }
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1235,
+            "notionalMinor": 37050,
+            "feeMinor": 60,
+            "requiredCashMinor": 0
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.35 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 0,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 2,
+            "quantity": 3,
+            "price": 1235,
+            "tif": "DAY"
+          }
+        }
+      }
+    },
+    "odd_venue_fractional_price": {
+      "actual": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "O2",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 7,
+            "price": 30,
+            "tif": "GTC"
+          },
+          "amounts": {
+            "shares": 7,
+            "lots": 7,
+            "priceMinor": 30,
+            "notionalMinor": 210,
+            "feeMinor": 1,
+            "requiredCashMinor": 211
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "0.30 USD",
+          "quantityLabel": "7 shares (7 lots)",
+          "estimatedCashMinor": 211,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "O2",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 7,
+            "price": 30,
+            "tif": "GTC"
+          }
+        },
+        "facadeSubmission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "O2",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 7,
+            "price": 30,
+            "tif": "GTC"
+          },
+          "amounts": {
+            "shares": 7,
+            "lots": 7,
+            "priceMinor": 30,
+            "notionalMinor": 210,
+            "feeMinor": 1,
+            "requiredCashMinor": 211
+          }
+        },
+        "facadePreview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "0.30 USD",
+          "quantityLabel": "7 shares (7 lots)",
+          "estimatedCashMinor": 211,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "O2",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 7,
+            "price": 30,
+            "tif": "GTC"
+          }
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "O2",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 7,
+            "price": 30,
+            "tif": "GTC"
+          },
+          "amounts": {
+            "shares": 7,
+            "lots": 7,
+            "priceMinor": 30,
+            "notionalMinor": 210,
+            "feeMinor": 1,
+            "requiredCashMinor": 211
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "0.30 USD",
+          "quantityLabel": "7 shares (7 lots)",
+          "estimatedCashMinor": 211,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "O2",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 7,
+            "price": 30,
+            "tif": "GTC"
+          }
+        }
+      }
+    },
+    "already_aligned_binary_price": {
+      "actual": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 1,
+            "price": 30,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 10,
+            "lots": 1,
+            "priceMinor": 30,
+            "notionalMinor": 300,
+            "feeMinor": 16,
+            "requiredCashMinor": 316
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "0.30 USD",
+          "quantityLabel": "10 shares (1 lots)",
+          "estimatedCashMinor": 316,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 1,
+            "price": 30,
+            "tif": "DAY"
+          }
+        },
+        "facadeSubmission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 1,
+            "price": 30,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 10,
+            "lots": 1,
+            "priceMinor": 30,
+            "notionalMinor": 300,
+            "feeMinor": 16,
+            "requiredCashMinor": 316
+          }
+        },
+        "facadePreview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "0.30 USD",
+          "quantityLabel": "10 shares (1 lots)",
+          "estimatedCashMinor": 316,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 1,
+            "price": 30,
+            "tif": "DAY"
+          }
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 1,
+            "price": 30,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 10,
+            "lots": 1,
+            "priceMinor": 30,
+            "notionalMinor": 300,
+            "feeMinor": 16,
+            "requiredCashMinor": 316
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "0.30 USD",
+          "quantityLabel": "10 shares (1 lots)",
+          "estimatedCashMinor": 316,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 1,
+            "price": 30,
+            "tif": "DAY"
+          }
+        }
+      }
+    },
+    "cash_equality_is_accepted": {
+      "actual": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1230,
+            "notionalMinor": 36900,
+            "feeMinor": 60,
+            "requiredCashMinor": 36960
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.30 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 36960,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          }
+        },
+        "facadeSubmission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1230,
+            "notionalMinor": 36900,
+            "feeMinor": 60,
+            "requiredCashMinor": 36960
+          }
+        },
+        "facadePreview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.30 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 36960,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          }
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": true,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          },
+          "amounts": {
+            "shares": 30,
+            "lots": 3,
+            "priceMinor": 1230,
+            "notionalMinor": 36900,
+            "feeMinor": 60,
+            "requiredCashMinor": 36960
+          }
+        },
+        "preview": {
+          "canSubmit": true,
+          "reason": null,
+          "priceLabel": "12.30 USD",
+          "quantityLabel": "30 shares (3 lots)",
+          "estimatedCashMinor": 36960,
+          "request": {
+            "clientRef": "paper/alpha/R-7",
+            "account": "A-42",
+            "venue": "P1",
+            "symbol": "ACME",
+            "side": 1,
+            "quantity": 3,
+            "price": 1230,
+            "tif": "DAY"
+          }
+        }
+      }
+    },
+    "fee_makes_cash_insufficient": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INSUFFICIENT_CASH"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INSUFFICIENT_CASH",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INSUFFICIENT_CASH"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INSUFFICIENT_CASH",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INSUFFICIENT_CASH"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INSUFFICIENT_CASH",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "reject_partial_lot": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "reject_zero_quantity": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "reject_maximum_lots_overflow": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "reject_negative_price": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "reject_price_below_buy_tick": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "reject_nan_price": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_PRICE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_PRICE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "reject_infinite_quantity": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_QUANTITY"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_QUANTITY",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "unsupported_venue_precedes_account": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_VENUE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_VENUE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_VENUE"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_VENUE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_VENUE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_VENUE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "venue_key_is_case_sensitive": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_VENUE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_VENUE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_VENUE"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_VENUE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_VENUE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_VENUE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "account_mismatch_precedes_quantity": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "ACCOUNT_UNAVAILABLE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "ACCOUNT_UNAVAILABLE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "ACCOUNT_UNAVAILABLE"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "ACCOUNT_UNAVAILABLE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "ACCOUNT_UNAVAILABLE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "ACCOUNT_UNAVAILABLE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "blocked_account": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "ACCOUNT_UNAVAILABLE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "ACCOUNT_UNAVAILABLE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "ACCOUNT_UNAVAILABLE"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "ACCOUNT_UNAVAILABLE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "ACCOUNT_UNAVAILABLE"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "ACCOUNT_UNAVAILABLE",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "empty_id_precedes_symbol": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_ID"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_ID",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_ID"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_ID",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_ID"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_ID",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "empty_symbol_precedes_quantity": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_SYMBOL"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_SYMBOL",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "INVALID_SYMBOL"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "INVALID_SYMBOL",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "INVALID_SYMBOL"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "INVALID_SYMBOL",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    },
+    "unsupported_time_in_force": {
+      "actual": {
+        "submission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_TIF"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_TIF",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        },
+        "facadeSubmission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_TIF"
+        },
+        "facadePreview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_TIF",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      },
+      "expected": {
+        "submission": {
+          "ok": false,
+          "reason": "UNSUPPORTED_TIF"
+        },
+        "preview": {
+          "canSubmit": false,
+          "reason": "UNSUPPORTED_TIF",
+          "priceLabel": "",
+          "quantityLabel": "",
+          "estimatedCashMinor": 0,
+          "request": null
+        }
+      }
+    }
+  },
+  "passed": true
+}

@@ -13,7 +13,7 @@
 | `scripts/verify_experiment_003.cjs` | Reproduce saved correctness outcomes and usage/hash checks without model access |
 | `scripts/check_history.cjs` | Compare historical raw bytes and the original RESULTS prefix with the before-change baseline |
 
-The lifecycle is **declare → validate verifier → commit protocol → prepare/snapshot → run models → verify outcomes → report → review/publish**. Acceptance and context selection are fixed before model runs. A negative-control failure is data, not a reason to loosen acceptance or replace a trial.
+The lifecycle is **declare → validate verifier and prepare prompts → commit protocol → snapshot → run models → verify outcomes → report → review/publish**. Acceptance and context selection are fixed before model runs. A negative-control failure is data, not a reason to loosen acceptance or replace a trial.
 
 Each run retains raw responses, JSONL provider events, stderr, actual saved-byte metrics, and independent acceptance results. Derived summaries are kept separately from raw events. Input + output is computed for each run and then summarized; cached/reasoning fields are shown separately but not added again.
 

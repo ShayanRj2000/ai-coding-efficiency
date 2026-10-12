@@ -1,0 +1,2 @@
+2026-10-12T06:55:13.650338Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-12T06:55:17.283522Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 213ms)... turn_id=01a12ee4-df6c-7bf1-b421-9d6a2d5b8d84 retries=1 max_retries=5 sampling_error=unexpected status 503 Service Unavailable: An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists.

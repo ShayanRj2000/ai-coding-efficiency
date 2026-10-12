@@ -136,12 +136,12 @@ Evidence: [raw usage/settings](experiment-002/test-results/2026-10-11-paired-001
 <!-- experiment-003:start -->
 ## Experiment 003: multi-file ticket parity
 
-**Results pending.** The protocol, prompts, verifier, reference tests, and runner are prepared. No model trials have completed yet. Completed valid trials so far: 0/0/0; no three-condition token or latency comparison is published until all nine finish.
+**Results pending.** The protocol, prompts, verifier, reference tests, and runner are prepared. Provider reported "Selected model is at capacity. Please try a different model." The declared model was kept unchanged. Completed valid trials so far: 1/1/0; no three-condition token or latency comparison is published until all nine finish.
 
 | Measurement | A: full | B: sufficient focused | C: insufficient focused |
 | --- | ---: | ---: | ---: |
 | Saved prompt bytes | 21919 | 11929 | 5841 |
-| Acceptance | 0/0 completed | 0/0 completed | 0/0 completed |
+| Acceptance | 1/1 completed | 1/1 completed | pending |
 | Median input tokens | unknown | unknown | unknown |
 | Median cached input tokens | unknown | unknown | unknown |
 | Median output tokens | unknown | unknown | unknown |
@@ -150,6 +150,14 @@ Evidence: [raw usage/settings](experiment-002/test-results/2026-10-11-paired-001
 | Median elapsed seconds | unknown | unknown | unknown |
 
 A provides all 16 files. B provides 11 sufficient files. C provides four files and omits the account model, venue policies, gateway contract, examples, facade, and Angular component/template. The omission list was declared before runs. A successful C result would be an observed inference on this task, not proof that those contracts are dispensable.
+
+| Attempt | Execution | Input | Cached input | Output | Reasoning | Input + output | Process seconds | Correctness | Corrections |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | ---: |
+| 1 A | completed | 18565 | 0 | 2792 | 1758 | 21357 | 88.31 | pass | 0 |
+| 1 B | completed | 16314 | 0 | 2488 | 1402 | 18802 | 84.11 | pass | 0 |
+| 1 C | unavailable | unknown | unknown | unknown | unknown | unknown | 13.16 | not measured | 0 |
+
+[Attempt evidence](experiment-003/test-results/2026-10-12-rotating-001/model-trials.json) retains actual failures and exposed usage. The unavailable attempt's process duration is not a successful model latency measurement. Missing usage stays unknown; unexecuted trials have no invented measurements. A service-capacity error is not evidence about context sufficiency. Retry the complete protocol later with a fresh run ID, retaining this partial run.
 
 Whole-run input + output is the sum reported for each run before calculating medians. Cached input and reasoning output are already included and are not added again. These measurements do not isolate context-selection effects or demonstrate general efficiency or monetary savings. Acceptance covers strict TypeScript, both unchanged exported APIs, 21 independent business cases, preview/submission/facade parity, frozen inputs and venue policies, and fresh results. Browser behavior and template compilation remain outside scope.
 <!-- experiment-003:end -->

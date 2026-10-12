@@ -40,13 +40,15 @@ Before model runs, tests must show that the broken baseline compiles but fails b
 npm ci --ignore-scripts
 python -B -m unittest discover -v
 npm test
-python prepare_experiment_003.py
+python prepare_experiment_003.py --destination verification/generated-003
 npm run experiment:003 -- UNIQUE_RUN_ID
 npm run report:003 -- UNIQUE_RUN_ID
 npm run verify:003
 ```
 
 Use `python3` if needed. Model runs require an authenticated Codex CLI and access to the declared model. Tests and CI require neither. `CODEX_CLI_JS` can point to an existing CLI entry when global npm discovery is unsuitable.
+
+The preparation command above exercises deterministic generation in a separate directory. Model runs use the already committed prompts and metrics under `experiment-003/`. The default preparation destination is protected after any recorded attempt, including a partial run.
 
 The protocol and verifier are committed before executing models. The runner stores that commit SHA, hashes the saved bytes, snapshots all supplied contexts and acceptance/execution code, and checks the frozen inputs/code before each trial. New run IDs never overwrite previous runs. Model responses, JSONL usage, stderr, corrections, wall time, and independent acceptance outcomes are retained. `verify:003` reproduces the recorded pass/fail outcomes, including negative-control failures; it does not require every model response to pass.
 

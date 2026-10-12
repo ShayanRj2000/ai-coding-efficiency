@@ -1,0 +1,49 @@
+{
+  "experiment": "003",
+  "run_id": "2026-10-12-rotating-001",
+  "status": "pending",
+  "conditions": {
+    "A": {
+      "prompt_bytes": 21919,
+      "completed_trials": 1,
+      "passed": 1,
+      "median_input": null,
+      "median_cached": null,
+      "median_output": null,
+      "median_reasoning": null,
+      "median_total": null,
+      "median_seconds": null
+    },
+    "B": {
+      "prompt_bytes": 11929,
+      "completed_trials": 1,
+      "passed": 1,
+      "median_input": null,
+      "median_cached": null,
+      "median_output": null,
+      "median_reasoning": null,
+      "median_total": null,
+      "median_seconds": null
+    },
+    "C": {
+      "prompt_bytes": 5841,
+      "completed_trials": 0,
+      "passed": 0,
+      "median_input": null,
+      "median_cached": null,
+      "median_output": null,
+      "median_reasoning": null,
+      "median_total": null,
+      "median_seconds": null
+    }
+  },
+  "source_sha256": "fc55aecc952d57943b4b777f289ff5caf870dd892360787ab90c74c749fd6a6f",
+  "limitations": [
+    "Three trials per condition on one synthetic task",
+    "Whole-run CLI totals do not isolate supplied-context tokens",
+    "Cache state, provider variance, and backend overhead are uncontrolled",
+    "No monetary cost measured",
+    "Angular declarations compile; browser rendering and Angular template compilation are not tested",
+    "Insufficient context omits known dependencies; models may still infer a correct implementation"
+  ]
+}
